@@ -1,0 +1,89 @@
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+body {
+  font-size: 32px;
+  line-height: 1.25;
+  background-color: #837DFF;
+  color: #BF81FF;
+  margin: 240px auto 240px auto;
+  max-width: 1120px;
+  overflow-x: hidden;
+  transition: background-color 1s;
+}
+
+p {
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  z-index: 1;
+}
+
+header img {
+  width: 136px;
+  transition: width 0.5s;
+}
+
+header.scrolled img {
+  width: 64px;
+}
+
+section {
+  margin: 80px 0 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section div {
+  padding: 40px;
+  position: relative;
+}
+
+section img {
+  position: relative;
+  height: 500px;
+}
+
+div.stamps {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+}
+
+div.stamps img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: spin 30s linear infinite;
+}
+
+#image2 {
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  z-index: 10;
+}
+
+#image3 {
+  height: 300px;
+}
